@@ -3,5 +3,6 @@ const app = express();
 app.get("/",(req,res,next) => {
 res.send("hello");
 })
-app.listen(Process.env.PORT);
-console.log("The server is running on port:",Process.env.PORT);
+const port=process.env.PORT||5000;
+app.listen(port);
+console.log("The server is running on port:",port);
